@@ -79,7 +79,8 @@ for filename in tqdm(os.listdir(args.path)):
         row.append(prediction[l])
     data.append(row)
 
-with open('BAT.csv', 'w', encoding='UTF8', newline='') as f:
+new_csv_name = filepath + "Bat.csv"
+
+with open(new_csv_name, 'w', encoding='UTF8', newline='') as f:
     writer = csv.writer(f, delimiter=';')
     writer.writerows(data)
-
