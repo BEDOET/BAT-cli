@@ -79,7 +79,7 @@ for filename in tqdm(os.listdir(args.path)):
         row.append(prediction[l])
     data.append(row)
 
-new_csv_name = filepath + "Bat.csv"
+new_csv_name = filename + "Bat.csv"
 
 with open(new_csv_name, 'w', encoding='UTF8', newline='') as f:
     writer = csv.writer(f, delimiter=';')
